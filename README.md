@@ -56,6 +56,4 @@ Deploy in one click
 
 Links
 -----
-
-https://golang.org
-https://github.com/go-martini/martini
+http://crystal-lang.org/
