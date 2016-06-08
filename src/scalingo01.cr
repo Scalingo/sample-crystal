@@ -1,5 +1,6 @@
 require "http/server"
 require "option_parser"
+require "ecr/macros"
 
 bind = "0.0.0.0"
 port = 8080
@@ -11,8 +12,11 @@ OptionParser.parse! do |opts|
 end
 
 server = HTTP::Server.new(bind, port) do |context|
-  context.response.content_type = "text/plain"
-  context.response << "Hello world, got #{context.request.path}"
+  context.response.content_type = "text/html"
+  io = MemoryIO.new
+  ECR.embed "tpl/home.ecr", io
+  context.response << io.to_s
+
 end
 
 puts "Listening on http://#{bind}:#{port}"

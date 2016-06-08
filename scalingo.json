@@ -1,0 +1,13 @@
+{
+  "name": "Sample Crystal web all",
+  "description": "Sample web application using the Crystal language",
+  "logo": "https://scalingo.com/logo.svg",
+  "repository": "https://github.com/Scalingo/sample-crystal-web",
+  "website": "https://scalingo.com",
+  "env": {
+    "BUILDPACK_URL": {
+      "description": "Custom buildpack url",
+      "value": "https://github.com/crystal-lang/heroku-buildpack-crystal.git"
+    }
+  }
+}

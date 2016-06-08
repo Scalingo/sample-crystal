@@ -1,31 +1,61 @@
-# scalingo01
+Sample Crystal application
+======================================
 
-TODO: Write a description here
+Running Locally
+---------------
 
-## Installation
+First, you need to have a working crystal environment:
 
+http://crystal-lang.org/docs/installation/
 
-TODO: Write installation instructions here
+You can specify the listening port using the --port flag
 
+### Test
+```sh
+crystal src/scalingo01.cr -- --port 9090
+```
 
-## Usage
+### Build
+```sh
+crystal build src/scalingo01.cr --release
+```
 
+### Execute
+```sh
+./scalingo01 --port 9090
+```
 
+Deploying on Scalingo
+---------------------
 
-TODO: Write usage instructions here
+Create an application on https://scalingo.com, then:
 
-## Development
+```
+git remote add scalingo git@scalingo.com:<name_of_your_app>.git
+```
+Set the `BUILDPACK_URL` environement variable to `https://github.com/crystal-lang/heroku-buildpack-crystal.git`.
 
-TODO: Write development instructions here
+You can do it using the web dashboard, select your application, go to the `Environment` tab and add :
+```
+BUILDPACK_URL=https://github.com/crystal-lang/heroku-buildpack-crystal.git
+```
 
-## Contributing
+If you want to do it using the scalingo cli interface juste type :
+```sh
+scalingo -a <name_of_your_app> env-set BUILDPACK_URL=https://github.com/crystal-lang/heroku-buildpack-crystal.git
+```
 
-1. Fork it ( https://github.com/[your-github-name]/scalingo01/fork )
-2. Create your feature branch (git checkout -b my-new-feature)
-3. Commit your changes (git commit -am 'Add some feature')
-4. Push to the branch (git push origin my-new-feature)
-5. Create a new Pull Request
+And that's it!
 
-## Contributors
+The application is running at this url: https://sample-crystal.scalingo.io
 
-- [[your-github-name]](https://github.com/[your-github-name]) Jonathan Hurter - creator, maintainer
+Deploy in one click
+-------------------
+
+[![Deploy to Scalingo](https://cdn.scalingo.com/deploy/button.svg)](https://my.scalingo.com/deploy)
+
+Links
+-----
+
+https://golang.org
+https://github.com/go-martini/martini
