@@ -1,0 +1,7 @@
+name: scalingo01
+version: 0.1.0
+
+authors:
+  - Jonathan Hurter <jonathan@hurter.fr>
+
+license: MIT
