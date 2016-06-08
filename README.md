@@ -45,6 +45,11 @@ If you want to do it using the scalingo cli interface juste type :
 scalingo -a <name_of_your_app> env-set BUILDPACK_URL=https://github.com/crystal-lang/heroku-buildpack-crystal.git
 ```
 
+Next you'll need to push it to scalingo :
+```sh
+git push scalingo master
+```
+
 And that's it!
 
 The application is running at this url: https://sample-crystal.scalingo.io
