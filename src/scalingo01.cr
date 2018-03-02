@@ -13,10 +13,9 @@ end
 
 server = HTTP::Server.new(bind, port) do |context|
   context.response.content_type = "text/html"
-  io = MemoryIO.new
+	io = IO::Memory.new
   ECR.embed "tpl/home.ecr", io
   context.response << io.to_s
-
 end
 
 puts "Listening on http://#{bind}:#{port}"
