@@ -1,0 +1,10 @@
+version: '3'
+services:
+  sample-crystal:
+    image: "crystallang/crystal:0.18.7"
+    working_dir: /app
+    volumes:
+      - .:/app
+    ports:
+      - 3000:3000
+    command: sh -c "crystal build src/scalingo01.cr --release && ./scalingo01"

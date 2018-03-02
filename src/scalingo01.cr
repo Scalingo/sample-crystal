@@ -3,7 +3,7 @@ require "option_parser"
 require "ecr/macros"
 
 bind = "0.0.0.0"
-port = 8080
+port = 3000
 
 OptionParser.parse! do |opts|
   opts.on("-p PORT", "--port PORT", "define port to run server") do |opt|
