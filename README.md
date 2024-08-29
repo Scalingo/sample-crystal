@@ -57,7 +57,7 @@ The application is running at this url: https://sample-crystal.scalingo.io
 Deploy in one click
 -------------------
 
-[![Deploy to Scalingo](https://cdn.scalingo.com/deploy/button.svg)](https://my.scalingo.com/deploy)
+[![Deploy to Scalingo](https://cdn.scalingo.com/deploy/button.svg)](https://dashboard.scalingo.com/create/app?source=https://github.com/Scalingo/sample-crystal#master)
 
 Links
 -----
